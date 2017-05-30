@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body>
+
+<div class="top-panel">
+  <a href="./index.html" class="top-panel__logo">
+    <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
+  </a>
+
+  <span class="top-panel__menu-toggler"></span>
+  <ul class="top-panel__menu">
+    <li class="top-panel__menu-item top-panel__menu-item--catalog">
+      <a href="./catalog.html">Каталог товаров</a>
+    </li>
+    <li class="top-panel__menu-item top-panel__menu-item--to-order">
+      <a>Вязание на заказ</a>
+    </li>
+    <li class="top-panel__menu-item top-panel__menu-item--search">
+      <a href="#">Поиск по сайту</a>
+    </li>
+    <li class="top-panel__menu-item top-panel__menu-item--cart">
+      <a href="#">Корзина: <span class="top-panel__cart-status">пока пуста</span></a>
+    </li>
+  </ul>
+</div>
+
+<header class="page-header page-header--catalog">
+  <h1 class="page-header__title">Каталог товаров</h1>
+</header>
+
+<section class="form">
+  <h2 class="form__title">Форма заказа</h2> <!-- скрыт -->
+
+  <div class="form__desc">
+    Мы будем рады воплотить в жизнь ваши пожелания!
+    Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+  </div>
+
+  <form action="https://echo.htmlacademy.ru/" method="post">
+    <fieldset class="form__fieldset">
+      <legend>Тип</legend>
+      <label>
+        <input type="radio" name="type" value="accessory" checked>
+        Аксессуар для интерьера
+      </label>
+      <label>
+        <input type="radio" name="type" value="toy">
+        Детская игрушка
+      </label>
+    </fieldset>
+
+    <fieldset class="form__fieldset">
+      <legend>Цвет</legend>
+
+      <label>
+        <input type="checkbox" name="color[]" value="white" checked>
+        Белый
+      </label>
+      <label>
+        <input type="checkbox" name="color[]" value="grey" checked>
+        Серый
+      </label>
+      <label>
+        <input type="checkbox" name="color[]" value="tiffany">
+        «Тиффани»
+      </label>
+      <label>
+        <input type="checkbox" name="color[]" value="black">
+        Черный
+      </label>
+      <label>
+        <input type="checkbox" name="color[]" value="pink">
+        Розовый
+      </label>
+      <label>
+        <input type="checkbox" name="color[]" value="orange">
+        Оранжевый
+      </label>
+    </fieldset>
+
+    <fieldset class="form__fieldset">
+      <legend>ФИО</legend>
+
+      <label>
+        <span class="form__fio-title">Имя:</span>
+        <input class="form__fio-field" type="text" name="first-name" required placeholder="Введите ваше имя*">
+      </label>
+
+      <label>
+        <span class="form__fio-title">Фамилия:</span>
+        <input class="form__fio-field" type="text" name="last-name" required placeholder="Укажите фамилию*">
+      </label>
+
+      <label>
+        <span class="form__fio-title">Отчество:</span>
+        <input class="form__fio-field" type="text" name="middle-name" placeholder="Отчество, если желаете">
+      </label>
+    </fieldset>
+
+    <fieldset class="form__fieldset">
+      <legend>тел</legend>
+      <input class="form__tel-field" type="tel" name="tel" required placeholder="+7 ХХХ ХХ ХХ*" aria-label="телефон">
+    </fieldset>
+
+    <fieldset class="form__fieldset">
+      <legend>тел</legend>
+      <input class="form__email-field" type="email" name="email" required placeholder="Ваш Email*" aria-label="почта">
+    </fieldset>
+
+    <fieldset class="form__fieldset">
+      <legend>Доп</legend>
+      <textarea name="detail" placeholder="Опишите все ваши пожелания к заказу" aria-label="пожелания к заказу"></textarea>
+    </fieldset>
+
+    <div class="form__required-field-note">
+      *Поля обязательны для заполнения
+    </div>
+
+    <button type="submit" class="form__submit-button btn">Отправить заказ</button>
+  </form>
+</section>
+
+<footer class="page-footer">
+  <div class="page-footer__logo"></div>
+  <div class="page-footer__socials social-links">
+    <a class="social-link  social-link--instagram" href="https://www.instagram.com/">instagram</a>
+    <a class="social-link  social-link--facebook" href="https://www.facebook.com/">facebook</a>
+    <a class="social-link  social-link--twitter" href="https://twitter.com/">twitter</a>
+  </div>
+  <div class="page-footer__copyright">
+    Разработано
+    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HtmlAcademy</a>
+  </div>
+</footer>
+
+</body>
+</html>
