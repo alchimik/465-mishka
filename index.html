@@ -47,9 +47,9 @@
     <h2 class="featured-product__title">Вязаные корзинки</h2>
     <div class="featured-product__sub-title">Товар недели</div>
 
-    <div class="featured-product__desc">
+    <p class="featured-product__desc">
       Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-    </div>
+    </p>
 
     <table class="featured-product__parameter">
       <tr>
@@ -70,13 +70,11 @@
       <img src="http://placehold.it/260x315" width="260" height="315" alt="Корзина такая-та">
     </div>
 
-    <div class="featured-product__price">
+    <span class="featured-product__price">
       Цена: 990 руб.
-    </div>
+    </span>
 
-    <button class="featured-product__order-button btn" type="button">
-      Заказать
-    </button>
+    <a href="#" class="featured-product__order-button btn">Заказать</a>
   </div>
 </section>
 
@@ -112,11 +110,11 @@
     <h2 class="reviews__title">Отзывы</h2>
 
     <blockquote class="reviews__item">
-      <div class="reviews__text">
+      <p class="reviews__text">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
         как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
         и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-      </div>
+      </p>
       <cite class="reviews__author">
         <span class="reviews__author-name">Анастасия Красильникова</span>
         <span class="reviews__author-email">@misssssiskras</span>
@@ -126,7 +124,7 @@
     <button class="reviews__prev" type="button">Предыдущий отзыв</button>
     <button class="reviews__next" type="button">Следующий отзыв</button>
 
-    <button class="reviews__add-review-button btn" type="button">Написать</button>
+    <a href="#" class="reviews__add-review-button btn">Написать</a>
   </div>
 </section>
 
@@ -134,19 +132,19 @@
   <div class="contacts__wrapper">
     <h2 class="contacts__title">Контакты</h2>
     <div class="contacts__block">
-      <span class="contacts__field">e-mail:</span>
-      <span class="contacts__value">
-        <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-      </span>
+      <div class="contacts__field">e-mail:</div>
+      <div class="contacts__value">
+        <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+      </div>
     </div>
 
     <div class="contacts__block">
-      <span class="contacts__field">адрес:</span>
-      <span class="contacts__value">
-        г. Санкт-Петербург, <br>
-        ул. Большая Конюшенная, <br>
-        д. 19/8, офис 101 <br>
-      </span>
+      <div class="contacts__field">адрес:</div>
+      <div class="contacts__value">
+        <div>г. Санкт-Петербург,</div>
+        <div>ул. Большая Конюшенная,</div>
+        <div>д. 19/8, офис 101</div>
+      </div>
     </div>
   </div>
 
@@ -154,14 +152,42 @@
     <div class="contacts__map">
       <img src="http://placehold.it/320x457" alt="карта">
     </div>
-    <button class="contacts__response-button btn" type="button">Напишите нам</button>
+    <a href="#" class="contacts__response-button btn">Напишите нам</a>
   </div>
 </section>
 
+<form class="modal-cart-from" action="https://echo.htmlacademy.ru/" method="post">
+  <div class="modal-cart-from__wrapper">
+    <h2 class="modal-cart-from__title">Добавить в корзину</h2>
+
+    <p class="modal-cart-from__desc">Выберите размер:</p>
+
+    <div class="modal-cart-from__size-list">
+      <label>
+        <input class="modal-cart-from__size-input" type="checkbox" name="size" value="S" checked>
+        <span class="modal-cart-from__size-value">S</span>
+      </label>
+      <label>
+        <input class="modal-cart-from__size-input" type="checkbox" name="size" value="M">
+        <span class="modal-cart-from__size-value">M</span>
+      </label>
+      <label>
+        <input class="modal-cart-from__size-input" type="checkbox" name="size" value="L">
+        <span class="modal-cart-from__size-value">L</span>
+      </label>
+    </div>
+
+    <button class="modal-cart-from__submit-button btn btn--filled" type="submit">Добавить</button>
+  </div>
+</form>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper">
-    <div class="page-footer__logo"></div>
-    <div class="page-footer__social-links social-links">
+    <a class="page-footer__logo">
+      <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
+    </a>
+
+    <div class="social-links">
       <a class="social-links__link  social-links__link--instagram" href="https://www.instagram.com/"
          target="_blank" title="Мы в Инстаграме">Мы в Инстаграме</a>
       <a class="social-links__link  social-links__link--facebook" href="https://www.facebook.com/"
@@ -169,9 +195,12 @@
       <a class="social-links__link  social-links__link--twitter" href="https://twitter.com/"
          target="_blank" title="Мы в Вконтакте">Мы в Вконтакте</a>
     </div>
+
     <div class="page-footer__copyright">
       Разработано
-      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        HTML Academy
+      </a>
     </div>
   </div>
 </footer>
