@@ -1,0 +1,75 @@
+.form {
+  padding-bottom: 55px;
+}
+
+.form__wrapper {
+  @include section-wrapper();
+}
+
+.form__title {
+  display: none; // TO_DO должен быть видим для читалок
+}
+
+.form__desc {
+  @include font(normal, 13px, 24px, $text-color__gray);
+
+  margin-top: 23px;
+}
+
+
+.form__fieldset {
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-top: solid 1px $base-color__aquamarine;
+  padding-left: 0;
+  margin: 23px 0 0 0;
+
+  legend {
+    @include font(bold, 17px, 16px, $base-color__aquamarine);
+
+    text-transform: uppercase;
+    padding-right: 25px;
+  }
+  label {
+    font: bold 17px/18px $global-font-family;
+    color: black;
+    display: block;
+  }
+
+  &--type {
+    height: 132px; // tmp
+  }
+
+  &--color {
+    height: 378px; // tmp
+  }
+
+  &--fio {
+    height: 290px; // tmp
+  }
+
+  &--tel {
+    height: 68px; // tmp
+  }
+
+  &--email {
+    height: 67px; // tmp
+  }
+
+  &--detail {
+    height: 168px; // tmp
+  }
+}
+
+.form__required-field-note {
+  @include font(normal, 14px, 16px, $text-color__gray);
+
+  sup {
+    vertical-align: inherit;
+  }
+}
+
+.form__submit-button {
+  margin-top: 31px;
+}

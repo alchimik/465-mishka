@@ -1,0 +1,48 @@
+.category {
+  margin-top: 47px;
+}
+
+.category__wrapper {
+  @include section-wrapper();
+}
+
+.category__item {
+  @include font(bold, 19px, 24px, white);
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding-top: 25px;
+  padding-bottom: 30px;
+
+  &:hover,
+  &:active {
+    padding-bottom: 35px;
+  }
+
+  &:active {
+    color: rgba(256, 256, 256, 0.7);
+  }
+
+  &--accessory {
+    background-color: $base-color__aquamarine;
+
+    &:hover,
+    &:active{
+      background-color: #59d5bc;
+    }
+  }
+
+  &--toy {
+    background-color: $base-color__aquamarine--dark;
+
+    &:hover,
+    &:active{
+      background-color: #46c1ae;
+    }
+  }
+}
+
+.category__name {
+  padding-right: 50%;
+  display: block;
+}

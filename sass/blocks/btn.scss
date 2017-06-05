@@ -1,0 +1,30 @@
+.btn {
+  $gray-color: $base-color__gray;
+  @include font(bold, 17px, 20px, $text-color__gray);
+  border: solid 2px $gray-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: white;
+  display: block;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 15px;
+
+  user-select: none;
+  box-sizing: border-box;
+
+  &:hover {
+    color: white;
+    background-color: $gray-color;
+  }
+
+  &:active {
+    color: rgba(white, 0.7);
+    background-color: $gray-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

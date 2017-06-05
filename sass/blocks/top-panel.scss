@@ -1,0 +1,54 @@
+.top-panel {
+  position: relative;
+  width: 100%;
+  height: 79px;
+  text-align: center;
+
+  border-bottom: solid 1px #ececec;
+}
+
+.top-panel__wrapper {
+  @include section-wrapper();
+
+  height: inherit;
+}
+
+.top-panel__logo {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.top-panel__menu-toggler {
+  float: right;
+}
+
+.top-panel__menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: solid 1px #ececec;
+}
+
+.top-panel__menu-item {
+  display: block;
+  @include link-station-colors();
+  text-decoration: none;
+  border-top: solid 1px #ececec;
+}
+
+.top-panel__menu-item-wrapper {
+  @include section-wrapper();
+}
+
+
+.top-panel__menu-item-content {
+  @include font(bold, 17px, 20px);
+
+  display: block;
+  padding: 29px 29px 29px 45px;
+  text-align: left;
+}
