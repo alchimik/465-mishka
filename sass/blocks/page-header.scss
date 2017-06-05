@@ -1,0 +1,21 @@
+.page-header {
+  background-color: #f1f1f1;
+
+  &--index {
+    background-color: #fafafa;
+  }
+}
+
+.page-header__wrapper {
+  @include section-wrapper();
+}
+
+.page-header__title {
+  @include main-header();
+
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 76px;
+}
+
+

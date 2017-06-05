@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -32,7 +33,7 @@
 </div>
 
 <header class="page-header page-header--catalog">
-  <h1 class="page-header__title">Каталог товаров</h1>
+  <h1 class="page-header__title">Вязание на заказ</h1>
 </header>
 
 <section class="form">
@@ -45,7 +46,7 @@
     </p>
 
     <form action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__fieldset--type">
         <legend>Тип</legend>
         <label>
           <input type="radio" name="type" value="accessory" checked>
@@ -57,7 +58,7 @@
         </label>
       </fieldset>
 
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__fieldset--color">
         <legend>Цвет</legend>
 
         <label>
@@ -86,7 +87,7 @@
         </label>
       </fieldset>
 
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__fieldset--fio">
         <legend>ФИО</legend>
 
         <label>
@@ -105,17 +106,17 @@
         </label>
       </fieldset>
 
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__fieldset--tel">
         <legend>тел</legend>
         <input class="form__tel-field" type="tel" name="tel" required placeholder="+7 ХХХ ХХ ХХ*" aria-label="телефон">
       </fieldset>
 
-      <fieldset class="form__fieldset">
-        <legend>тел</legend>
+      <fieldset class="form__fieldset form__fieldset--email">
+        <legend>E-mail</legend>
         <input class="form__email-field" type="email" name="email" required placeholder="Ваш Email*" aria-label="почта">
       </fieldset>
 
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__fieldset--detail">
         <legend>Доп</legend>
         <textarea name="detail" placeholder="Опишите все ваши пожелания к заказу"
                   aria-label="пожелания к заказу"></textarea>
@@ -153,6 +154,9 @@
     </div>
   </div>
 </footer>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="/js/app.js"></script>
 
 </body>
 </html>

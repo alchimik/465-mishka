@@ -1,0 +1,47 @@
+.product {
+  margin-bottom: 30px;
+}
+
+.product__img {
+  img {
+    display: block; // чтобы убрать отступа под картинкой
+  }
+}
+
+.product__wrapper {
+  display: block;
+  padding-left: 27px;
+  padding-right: 27px;
+  width: auto;
+  border: solid 1px #ededed;
+}
+
+.product__title {
+  @include font(bold, 17px, 24px);
+
+  text-decoration: none;
+  margin-top: 26px;
+  margin-bottom: 6px;
+
+  * {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+.product__desc {
+  @include font(bold, 13px, 30px, $text-color__gray);
+
+  display: block;
+}
+
+.product__footer {
+  border-top: solid 1px #ececec;
+  margin-top: 19px;
+  padding-top: 22px;
+  padding-bottom: 26px;
+}
+
+.product__price {
+  @include font(bold, 15px, 24px);
+}

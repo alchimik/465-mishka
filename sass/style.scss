@@ -1,0 +1,25 @@
+@import "../node_modules/normalize.css/normalize.css";
+
+@import "global/variables";
+@import "mixins";
+
+@import "global/scaffolding.scss";
+@import "global/fonts.scss";
+
+@import "blocks/btn.scss";
+@import "blocks/category";
+@import "blocks/about-us.scss";
+@import "blocks/contacts.scss";
+@import "blocks/featured-product.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/reviews.scss";
+@import "blocks/top-panel.scss";
+@import "blocks/modal-cart-from";
+@import "blocks/catalog";
+@import "blocks/product";
+@import "blocks/production";
+@import "blocks/form";
+
+
+

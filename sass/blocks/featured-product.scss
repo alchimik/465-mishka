@@ -1,0 +1,52 @@
+.featured-product {
+  padding-top: 29px;
+  padding-bottom: 38px;
+
+  border-bottom: solid 2px $base-color__gray;
+}
+
+.featured-product__wrapper {
+  @include section-wrapper();
+}
+
+.featured-product__title {
+  @include section-header();
+
+  margin-bottom: 4px;
+}
+
+.featured-product__sub-title {
+  @include font(bold, 17px, 20px, $base-color__aquamarine);
+
+  text-transform: uppercase;
+}
+
+.featured-product__desc {
+  @include font(normal, 15px, 24px, $text-color__gray);
+
+  margin-top: 24px;
+}
+
+.featured-product__parameter {
+  margin-top: 24px;
+  margin-bottom: 70px; // временно, пока на сверстана сама таблица
+
+  & * {
+    @include font(normal, 15px, 20px, $text-color__gray);
+  }
+}
+
+.featured-product__price {
+  @include font(bold, 17px, 24px, $text-color__gray);
+
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.featured-product__order-button {
+  display: block;
+  width: auto;
+
+  margin-top: 26px;
+}

@@ -1,0 +1,42 @@
+@mixin section-wrapper {
+  display: block;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: auto;
+}
+
+
+@mixin main-header {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+@mixin section-header {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+@mixin font($weight, $size, $height, $color: inherit) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin link-station-colors ($color: $text-color__default) {
+  color: $color;
+
+  &:hover {
+    color: rgba($color, 0.6);
+  }
+
+  &:active {
+    color: rgba($color, 0.3);
+  }
+}

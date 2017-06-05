@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -92,18 +93,23 @@
 
 <section class="production">
   <div class="production__wrapper">
-    <h2 class="production__title">Процесс производства</h2>
+    <div class="production__wrapper-top">
+      <h2 class="production__title">Процесс производства</h2>
+    </div>
 
     <div class="production__video">
       <img src="http://placehold.it/260x150" width="260" height="150" alt="видео">
     </div>
-    <p class="production_desc">
-      По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-    </p>
 
-    <a href="#" class="production__buy-button btn">
-      Сделать заказ
-    </a>
+    <div class="production__wrapper-bottom">
+      <p class="production_desc">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      </p>
+
+      <a href="#" class="production__buy-button btn">
+        Сделать заказ
+      </a>
+    </div>
   </div>
 </section>
 
@@ -130,6 +136,9 @@
     </div>
   </div>
 </footer>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="/js/app.js"></script>
 
 </body>
 </html>
