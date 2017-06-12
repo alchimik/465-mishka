@@ -1,0 +1,36 @@
+.social-links {
+  border-bottom: solid 1px #e5e5e5;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 44px 20px 38px;
+  box-sizing: border-box;
+}
+
+.social-links__link {
+  @include hide-text;
+  width: 40px;
+  height: 40px;
+  background: no-repeat 50% 50%;
+
+  &--instagram {
+    background-image: url("/img/icon-insta.svg");
+  }
+
+  &--facebook {
+    background-image: url("/img/icon-fb.svg");
+    background-position-y: 35%;
+  }
+
+  &--twitter {
+    background-image: url("/img/icon-twitter.svg");
+  }
+}
+
+
+@include respond-to($DEVICE__TABLET_AND_DESKTOP) {
+  .social-links {
+    width: 260px;
+  }
+}

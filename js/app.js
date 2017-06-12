@@ -1,6 +1,11 @@
 $(function () {
-  $('.top-panel__menu-toggler').click(function () {
-    $('.top-panel__menu').toggle();
+  var $topPanel = $('.top-panel');
+  $topPanel.removeClass('top-panel--no-js');
+
+  $topPanel.find('.top-panel__menu-toggler').click(function () {
+    $topPanel
+      .toggleClass('top-panel--menu-opened')
+      .toggleClass('top-panel--menu-closed');
   });
 
   $('.featured-product__order-button').click(function () {

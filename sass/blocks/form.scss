@@ -7,7 +7,7 @@
 }
 
 .form__title {
-  display: none; // TO_DO должен быть видим для читалок
+  @include visually-hidden;
 }
 
 .form__desc {

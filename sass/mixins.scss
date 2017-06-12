@@ -1,25 +1,13 @@
-@mixin section-wrapper {
-  display: block;
-  margin-left: 30px;
-  margin-right: 30px;
-  width: auto;
-}
-
-
-@mixin main-header {
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: bold;
-  color: black;
-  margin: 0;
-}
-
-@mixin section-header {
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: bold;
-  color: black;
-  margin: 0;
+@mixin respond-to($device-type) {
+  @if $device-type == $DEVICE__MOBILE {
+    @media (max-width: $screen-width__max-mobile) { @content; }
+  } @else if $device-type == $DEVICE__TABLET {
+    @media (min-width: $screen-width__max-mobile + 1) and (max-width: $screen-width__max-tablet) { @content; }
+  } @else if $device-type == $DEVICE__DESKTOP {
+    @media (min-width: $screen-width__max-tablet + 1) { @content; }
+  } @else if $device-type == $DEVICE__TABLET_AND_DESKTOP {
+    @media (min-width: $screen-width__max-mobile + 1) { @content; }
+  }
 }
 
 @mixin font($weight, $size, $height, $color: inherit) {
@@ -29,14 +17,79 @@
   color: $color;
 }
 
-@mixin link-station-colors ($color: $text-color__default) {
-  color: $color;
+@mixin section-wrapper__width-and-center {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
 
-  &:hover {
-    color: rgba($color, 0.6);
+  @include respond-to($DEVICE__MOBILE) {
+    width: $content-width__mobile;
   }
 
-  &:active {
-    color: rgba($color, 0.3);
+  @include respond-to($DEVICE__TABLET) {
+    width: $content-width__tablet;
   }
+
+  @include respond-to($DEVICE__DESKTOP) {
+    width: $content-width__desktop;
+  }
+}
+
+@mixin section-wrapper__padding {
+  @include respond-to($DEVICE__MOBILE) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include respond-to($DEVICE__TABLET) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include respond-to($DEVICE__DESKTOP) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@mixin section-wrapper {
+  @include section-wrapper__width-and-center();
+  @include section-wrapper__padding();
+}
+
+@mixin section-header {
+  @include font(bold, 25px, 30px);
+  color: black;
+  margin: 0;
+
+  @include respond-to($DEVICE__TABLET) {
+    @include font(bold, 43px, 50px);
+  }
+
+  @include respond-to($DEVICE__DESKTOP) {
+    @include font(bold, 53px, 57px);
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    display: table;
+    content: ' ';
+    clear: both;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin hide-text {
+  font-size: 0;
 }

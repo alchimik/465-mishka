@@ -1,9 +1,23 @@
+$DEVICE__MOBILE: 'mobile';
+$DEVICE__TABLET: 'table';
+$DEVICE__DESKTOP: 'desctop';
+$DEVICE__TABLET_AND_DESKTOP: 'tablet_or_desctop';
+
+$screen-width__max-mobile: 767px;
+$screen-width__min-tablet: $screen-width__max-mobile + 1;
+$screen-width__max-tablet: 1149px;
+$screen-width__min-desktop: $screen-width__max-tablet + 1;
+
+$content-width__mobile: 320px;
+$content-width__tablet: $screen-width__min-tablet;
+$content-width__desktop: $screen-width__min-desktop;
+
+
 $global-font-family: "Open Sans", Arial, sans-serif;
 
 $base-color__gray: #444444;
 $base-color__aquamarine: #63d1bb;
 $base-color__aquamarine--dark: #56c3b2;
-
 
 $text-color__default: black;
 $text-color__gray: $base-color__gray;

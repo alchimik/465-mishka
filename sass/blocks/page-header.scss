@@ -1,5 +1,6 @@
 .page-header {
   background-color: #f1f1f1;
+  border-top: solid 1px #ececec;
 
   &--index {
     background-color: #fafafa;
@@ -11,11 +12,54 @@
 }
 
 .page-header__title {
-  @include main-header();
+  @include font(bold, 27px, 30px);
 
+  margin: 0;
   text-align: center;
   padding-top: 70px;
   padding-bottom: 76px;
+
+  &--index {
+    padding-bottom: 123px;
+  }
+
+  @include respond-to($DEVICE__TABLET) {
+    @include font(bold, 43px, 50px);
+  }
+
+  @include respond-to($DEVICE__DESKTOP) {
+    @include font(bold, 53px, 57px);
+
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
+
+@include respond-to($DEVICE__TABLET) {
+  .page-header {
+
+    &--index {
+
+      .page-header__title {
+        padding-top: 153px; // tmp
+      }
+    }
+  }
+
+  .page-header__title {
+    &--index {
+      padding-bottom: 373px;
+    }
+  }
+}
+
+@include respond-to($DEVICE__DESKTOP) {
+  .page-header__title {
+    &--index {
+      padding-bottom: 359px;
+      padding-top: 153px;
+    }
+  }
+}
 

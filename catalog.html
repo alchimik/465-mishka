@@ -8,29 +8,57 @@
 </head>
 <body>
 
-<div class="top-panel">
+<nav class="top-panel top-panel--menu-closed top-panel--no-js">
   <div class="top-panel__wrapper">
-    <a href="./index.html" class="top-panel__logo">
+    <a class="top-panel__logo">
       <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
     </a>
 
-    <span class="top-panel__menu-toggler"></span>
-    <ul class="top-panel__menu">
-      <li class="top-panel__menu-item top-panel__menu-item--catalog">
-        <a>Каталог товаров</a>
-      </li>
-      <li class="top-panel__menu-item top-panel__menu-item--to-order">
-        <a href="./form.html">Вязание на заказ</a>
-      </li>
-      <li class="top-panel__menu-item top-panel__menu-item--search">
-        <a href="#">Поиск по сайту</a>
-      </li>
-      <li class="top-panel__menu-item top-panel__menu-item--cart">
-        <a href="#">Корзина: <span class="top-panel__cart-status">пока пуста</span></a>
-      </li>
-    </ul>
+    <span class="top-panel__menu-toggler">Меню</span>
+
+    <a class="top-panel__menu-item  top-panel__menu-item--catalog">
+      <span class="top-panel__menu-item-wrapper">
+        <span class="top-panel__menu-item-content">Каталог товаров</span>
+      </span>
+    </a>
+    <a class="top-panel__menu-item  top-panel__menu-item--to-order" href="/form.html">
+      <span class="top-panel__menu-item-wrapper">
+        <span class="top-panel__menu-item-content">Вязание на заказ</span>
+      </span>
+    </a>
+    <a class="top-panel__menu-item  top-panel__menu-item--search" href="#">
+      <span class="top-panel__menu-item-wrapper">
+        <span class="top-panel__menu-item-content">Поиск по сайту</span>
+      </span>
+    </a>
+    <a class="top-panel__menu-item  top-panel__menu-item--cart" href="#">
+      <span class="top-panel__menu-item-wrapper">
+        <span class="top-panel__menu-item-content">
+          Корзина: <span class="top-panel__cart-status">пока пуста</span>
+        </span>
+      </span>
+    </a>
+
+    <a class="top-panel__menu-item  top-panel__menu-item--new" href="#">
+      <span class="top-panel__menu-item-wrapper">
+        <span class="top-panel__menu-item-content">
+          Новые поступления
+        </span>
+      </span>
+    </a>
+    <a class="top-panel__menu-item  top-panel__menu-item--sale" href="#">
+      <span class="top-panel__menu-item-wrapper">
+        <span class="top-panel__menu-item-content">
+          Распродажа
+        </span>
+      </span>
+    </a>
+
+    <span class="top-panel__delivery-note">
+      Бесплатная доставка по России
+    </span>
   </div>
-</div>
+</nav>
 
 <header class="page-header page-header--catalog">
   <h1 class="page-header__title">Каталог товаров</h1>

@@ -12,6 +12,9 @@
 }
 
 .about-us__list {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -21,4 +24,38 @@
   @include font(bold, 17px, 20px);
   padding-top: 67px;
   padding-bottom: 16px;
+
+  :nth-child(odd) {
+    order: 1;
+  }
 }
+
+@include respond-to($DEVICE__TABLET_AND_DESKTOP) {
+  .about-us {
+    padding-top: 55px;
+  }
+
+  .about-us__list {
+
+  }
+
+  .about-us__item {
+    @include font(bold, 20px, 22px);
+    width: 50%;
+    padding-top: 87px;
+    padding-bottom: 25px;
+  }
+}
+
+
+@include respond-to($DEVICE__DESKTOP) {
+  .about-us {
+    padding-top: 68px;
+  }
+
+  .about-us__wrapper {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+}
+
