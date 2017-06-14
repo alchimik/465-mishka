@@ -23,10 +23,6 @@
   }
 }
 
-.top-panel__menu-item-content {
-  display: inline-block;
-}
-
 .top-panel__delivery-note {
   display: none;
   @include font(normal, 15px, 24px, $text-color__gray);
@@ -54,6 +50,9 @@
     width: 320px;
     margin-left: -30px;
     background-color: white;
+    text-align: left;
+    padding: 29px 29px 29px 75px;
+    box-sizing: border-box;
 
     &--cart {
       border-bottom: solid 1px #ececec;
@@ -62,26 +61,11 @@
     .top-panel--menu-closed & {
       display: none;
     }
-
-    .top-panel--no-js &,
-    .top-panel--menu-opened & {
-      display: block;
-
-      &--new,
-      &--sale {
-        display: none;
-      }
-    }
   }
 
-  .top-panel__menu-item-wrapper {
-    @include section-wrapper();
-    display: block;
-    text-align: left;
-  }
-
-  .top-panel__menu-item-content {
-    padding: 29px 29px 29px 45px;
+  .top-panel--no-js .top-panel__additional-menu,
+  .top-panel--menu-opened .top-panel__additional-menu {
+    display: none;
   }
 
   .top-panel__delivery-note {
@@ -142,65 +126,74 @@
     position: relative;
   }
 
-  .top-panel__menu-item {
-    border-top: none;
-    background-color: transparent;;
-
-    &:last-of-type {
-      border-bottom: none;
-    }
-
-    &--catalog,
-    &--to-order {
-      order: 10;
-      font-size: 15px;
-      width: auto;
-
-      .top-panel__menu-item-content {
-        padding: 21px 36px 21px 0;
-      }
-    }
-
-    &--search {
-      height: inherit;
-      width: 80px;
-      border-left: solid 1px #ececec;
-      order: 2;
-      font-size: 0;
-    }
-
-    &--cart {
-      height: inherit;
-      width: 264px;
-      border-left: solid 1px #ececec;
-      order: 2;
-
-      .top-panel__menu-item-content {
-        padding: 32px 0 35px 82px;
-      }
-    }
-
-    &--new,
-    &--sale {
-      display: none;
-    }
-  }
-
-  .top-panel__menu-item-wrapper {
-    margin: 0;
-    padding: 0;
-  }
-
   .top-panel__delivery-note {
     display: block;
     order: 100;
     margin-left: auto;
     margin-top: 18px;
   }
+
+  .top-panel__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: none;
+    border-bottom: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    height: 88px;
+    padding-bottom: 4px; // костыль для точного совпадения с макетом
+  }
+
+  .top-panel__user-menu .top-panel__menu-item {
+    border-left: solid 1px #ececec;
+
+    &--search {
+      @include hide-text;
+      width: 82px;
+      border-left: solid 1px #ececec;
+    }
+
+    &--cart {
+      width: 265px;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@mixin menu-item-in-second-row {
+  font-size: 15px;
+  height: 60px;
+  padding: 0 30px;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+}
+
+@include respond-to($DEVICE__TABLET) {
+  .top-panel__user-menu {
+    display: flex;
+    order: 2;
+  }
+
+  .top-panel__main-menu {
+    display: flex;
+    order: 10;
+    max-width: 430px;
+
+    .top-panel__menu-item {
+      @include menu-item-in-second-row;
+      padding: 0 18px;
+    }
+  }
+
+  .top-panel__additional-menu {
+    display: none;
+  }
 }
 
 @include respond-to($DEVICE__DESKTOP) {
-
   .top-panel__logo {
     width: 180px;
     flex-grow: 1;
@@ -212,50 +205,38 @@
     flex-wrap: wrap;
   }
 
-  .top-panel__menu-item {
-    border-top: none;
-    background-color: transparent;;
+  .top-panel__user-menu {
+    display: flex;
+    order: 3;
+  }
 
-    &:last-of-type {
-      border-bottom: none;
-    }
+  .top-panel__main-menu {
+    display: flex;
+    order: 1;
+    max-width: 440px;
 
-    &--catalog,
-    &--to-order {
-      order: 1;
-      font-size: 17px;
-      width: auto;
+    .top-panel__menu-item {
+      border-right: solid 1px #ececec;
+      padding: 0 35px 4px;
 
-      .top-panel__menu-item-content {
-        padding: 32px 38px 37px 0;
+      &:last-of-type {
+        border-right: none;
       }
-    }
 
-    &--to-order {
-      .top-panel__menu-item-content {
-        padding-left: 32px
-      }
-    }
-
-    &--search {
-      width: 80px;
-      order: 3;
-    }
-
-    &--cart {
-      order: 3;
-    }
-
-    &--new,
-    &--sale {
-      order: 4;
-      font-size: 15px;
-      width: auto;
-      display: block;
-
-      .top-panel__menu-item-content {
-        padding: 20px 62px 20px 0;
+      &:first-of-type {
+        padding-left: 0;
       }
     }
   }
+
+  .top-panel__additional-menu {
+    display: flex;
+    order: 4;
+    max-width: 700px;
+
+    .top-panel__menu-item {
+      @include menu-item-in-second-row;
+    }
+  }
 }
+
